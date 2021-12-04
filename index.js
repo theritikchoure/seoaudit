@@ -2,14 +2,24 @@ const express = require('express'); // import express
 var cookieParser = require("cookie-parser"); // import cookieParser
 var bodyParser = require("body-parser"); 
 const getInfo = require('./src/bloggingos');
+var path = require('path');
 
 const app = express();
 app.use(express.json());
 app.use(cookieParser());
 app.use(express.urlencoded({extended:false}));
 
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'ejs');
+
+//setup public folder
+app.use(express.static(__dirname + '/public'));
+
+app.get('/', (req, res)=>{
+    res.render('index');  
+});
 // API URL Route
-app.post('/', async (req, res, next) => {
+app.post('/api', async (req, res, next) => {
     try
     {
         console.log(req.body.url)

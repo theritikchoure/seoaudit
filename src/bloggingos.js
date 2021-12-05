@@ -7,11 +7,13 @@ async function getInfo(url) {
     const websiteUrl = getWebsiteUrl(url);
     const { data } = await axios.get(websiteUrl);
 
+    // console.log(data);
     const dom = new JSDOM(data);
     const getElement = (selector) => dom.window.document.querySelector(selector).textContent.trim();
 
-    // const previewImageURL = dom.window.document.querySelector('#screenshotData img').getAttribute('src');
+    const previewImageURL = await dom.window.document.querySelector('#screenshotData div').getAttribute('class');
     
+    console.log(previewImageURL)
     //#screenshotData > img
 
     const title = getElement('#seoBox1 div .msgBox').replace('SEO Checker', 'SEO Audit Report by Ritik');
@@ -92,9 +94,9 @@ async function getInfo(url) {
         trafficBasedRank        
     }
     // console.log(auditResult);
-    return auditResult;
+    // return auditResult;
 }
 
-// getInfo('seoritik.blogspot.com')
+getInfo('google.com')
 module.exports = getInfo;
 

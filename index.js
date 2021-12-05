@@ -4,6 +4,7 @@ var bodyParser = require("body-parser");
 const apiRoutes = require('./routes/api.route');
 const userRoutes = require('./routes/user.route');
 var path = require('path');
+const db = require('./config/db');  // import database
 
 const app = express();
 app.use(express.json());

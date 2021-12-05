@@ -11,11 +11,6 @@ async function getInfo(url) {
     const dom = new JSDOM(data);
     const getElement = (selector) => dom.window.document.querySelector(selector).textContent.trim();
 
-    const previewImageURL = await dom.window.document.querySelector('#screenshotData div').getAttribute('class');
-    
-    console.log(previewImageURL)
-    //#screenshotData > img
-
     const title = getElement('#seoBox1 div .msgBox').replace('SEO Checker', 'SEO Audit Report by Ritik');
     const metaDesc = getElement('#seoBox2 div .bottom10').replace('SEO Checker', 'SEO Audit Report by Ritik');
     const URL = getElement('#seoBox26 div .msgBox').replace('comLength', 'com Length');
@@ -28,6 +23,7 @@ async function getInfo(url) {
 
     const brokenLink = getElement('#seoBox14 div .msgBox');
     const xmlSitemap = getElement('#seoBox15 div .msgBox').replace('file!http', 'file. http').replace(' Show Less', '');
+    
     const robotsTxt = getElement('#seoBox16 div .msgBox').replace('file!http', 'file. http').replace(' Show Less', '');
     const urlRewrite = getElement('#seoBox17 div .msgBox');
 
@@ -94,9 +90,9 @@ async function getInfo(url) {
         trafficBasedRank        
     }
     // console.log(auditResult);
-    // return auditResult;
+    return auditResult;
 }
 
-getInfo('google.com')
+// getInfo('google.com')
 module.exports = getInfo;
 

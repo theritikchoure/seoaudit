@@ -14,20 +14,41 @@ async function home(req, res, next) {
 }
 
 async function audit(req, res, next) {
-    const requrl = req.params.url;
-    url = requrl.replace('http://www.', '').replace('https://www.', '').replace('http://', '').replace('https://', '').replace('com/', 'com');
-    console.log(url)
-    let audit = await getInfo(url);
 
-    if(audit)
-    {
-        const response = {
-            message: `SEO Audit Report By Ritik for ${req.params.url}`,
-            audit
+    try{
+        const requrl = req.params.url;
+        url = requrl.replace('http://www.', '').replace('https://www.', '').replace('http://', '').replace('https://', '').replace('com/', 'com');
+        console.log(url)
+        let audit = await getInfo(url);
+
+        if(audit)
+        {
+            const response = {
+                message: `SEO Audit Report By Ritik for ${req.params.url}`,
+                audit
+            }
+            res.render('auditreport', { response: response, status: 'success' });
+        }else
+        {
+            res.render('auditreport', { response: false, status: 'fail' });
         }
-        res.render('auditreport', { response: response, status: 'success' });
-    }else
-    {
-        res.render('auditreport', { status: 'fail' });
+    } catch(error){
+        res.render('auditreport', { response: false, status: 'fail' });
     }
+    // const requrl = req.params.url;
+    // url = requrl.replace('http://www.', '').replace('https://www.', '').replace('http://', '').replace('https://', '').replace('com/', 'com');
+    // console.log(url)
+    // let audit = await getInfo(url);
+
+    // if(audit)
+    // {
+    //     const response = {
+    //         message: `SEO Audit Report By Ritik for ${req.params.url}`,
+    //         audit
+    //     }
+    //     res.render('auditreport', { response: response, status: 'success' });
+    // }else
+    // {
+    //     res.render('auditreport', { response: false, status: 'fail' });
+    // }
 }

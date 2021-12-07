@@ -31,7 +31,7 @@ app.use(function(req, res, next) {
     }
 });
 
-// Start Serverx
+// Start Server
 app.listen(process.env.PORT || 3000, function(err, result){
     if (err) console.log("Error in server setup");
 

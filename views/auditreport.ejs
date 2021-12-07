@@ -2,19 +2,7 @@
 <!DOCTYPE html>
 <html lang="en-US" class="no-js">
 <head>
-    <script type="text/javascript">  
-        function PrintDiv() {  
-            var divContents = document.getElementById("printReport").innerHTML;  
-            var printWindow = window.open('', '', 'height=200,width=400');  
-            printWindow.document.write('<html><head><title>Print DIV Content</title>');  
-            printWindow.document.write('</head><body >');  
-            printWindow.document.write(divContents);  
-            printWindow.document.write('</body></html>');  
-            printWindow.document.close();  
-            printWindow.print();  
-        }  
-    </script>  
-    
+
     <title>SEO Crawler - SEO &amp; Marketing HTML Template</title>
 
     <%- include('./includes/htmlHead')-%>
@@ -110,618 +98,25 @@
                         </div>
                     </div>
                     
-                    <div id="printReport" class="gdlr-core-pbf-wrapper " style="padding: 150px 0px 0px 0px;">
-                        <div class="gdlr-core-pbf-wrapper-content gdlr-core-js ">
-                            <div class="gdlr-core-pbf-wrapper-container clearfix gdlr-core-container">
-                                <div class="gdlr-core-pbf-column gdlr-core-column-60 gdlr-core-column-first">
-                                    <div class="gdlr-core-pbf-column-content-margin gdlr-core-js ">
-                                        <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js " style="max-width: 805px;">
-                                            <div class="gdlr-core-pbf-element">
-                                                <div class="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-center-align gdlr-core-title-item-caption-top gdlr-core-item-pdlr" style="padding-bottom: 25px;">
-                                                    <div class="gdlr-core-title-item-title-wrap ">
-                                                        <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " style="font-size: 33px;font-weight: 600;letter-spacing: 0px;text-transform: none;"><%= response.message %><span class="gdlr-core-title-item-title-divider gdlr-core-skin-divider"></span></h3></div>
-                                                </div>
-                                            </div>
-                                            <div class="gdlr-core-pbf-element">
-                                                <div class="gdlr-core-divider-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-divider-item-normal" style="padding-bottom: 40px;">
-                                                    <div class="gdlr-core-divider-container gdlr-core-center-align" style="max-width: 82px;">
-                                                        <div class="gdlr-core-divider-line gdlr-core-skin-divider" style="border-color: #ff4800;border-bottom-width: 3px;"></div>
+                    <!--content Here-->
+                    <% if(!response){ %>
+                        <div id="printReport" class="gdlr-core-pbf-wrapper " style="padding: 150px 0px 0px 0px;">
+                            <div class="gdlr-core-pbf-wrapper-content gdlr-core-js ">
+                                <div class="gdlr-core-pbf-wrapper-container clearfix gdlr-core-container">
+                                    <div class="gdlr-core-pbf-column gdlr-core-column-60 gdlr-core-column-first">
+                                        <div class="gdlr-core-pbf-column-content-margin gdlr-core-js ">
+                                            <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js " style="max-width: 805px;">
+                                                <div class="gdlr-core-pbf-element">
+                                                    <div class="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-center-align gdlr-core-title-item-caption-top gdlr-core-item-pdlr" style="padding-bottom: 25px;">
+                                                        <div class="gdlr-core-title-item-title-wrap ">
+                                                            <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " style="font-size: 33px;font-weight: 600;letter-spacing: 0px;text-transform: none;">Input Site is not valid!<span class="gdlr-core-title-item-title-divider gdlr-core-skin-divider"></span></h3></div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="gdlr-core-pbf-column gdlr-core-column-first">
-                                    <div class="gdlr-core-pbf-column-content-margin gdlr-core-js ">
-                                        <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js ">
-                                            <div class="gdlr-core-pbf-element">
-                                                <!--Title-->
-                                                <div class="seoBox">
-                                                    <div class="headBox clearfix">
-                                                       <h4 class="titleStr">Title Tag</h4>
-                                                       <h4 class="solveMsg" data-original-title="Easy to solve" data-toggle="tooltip" data-placement="top">
-                                                          <i class="fa fa-gear fa-xs solveMsgBlue"></i>
-                                                          <i class="fa fa-gear fa-xs "></i>
-                                                          <i class="fa fa-gear fa-xs "></i>
-                                                       </h4>
-                                                    </div>
-                                                    <div class="contentBox" id="seoBox1">
-                                                       <div class="improveBox">
-                                                          <div class="msgBox bottom10">       
-                                                            <%= response.audit.title %>
-                                                          </div>
-                                                       </div>
-                                                    </div>
-                                                </div>
-
-                                                <!--Meta Description-->
-                                                <div class="seoBox">
-                                                    <div class="headBox clearfix">
-                                                       <h4 class="titleStr">Meta Description</h4>
-                                                       <h4 class="solveMsg" data-original-title="Easy to solve" data-toggle="tooltip" data-placement="top">
-                                                          <i class="fa fa-gear fa-xs solveMsgBlue"></i>
-                                                          <i class="fa fa-gear fa-xs "></i>
-                                                          <i class="fa fa-gear fa-xs "></i>
-                                                       </h4>
-                                                    </div>
-                                                    <div class="contentBox" id="seoBox1">
-                                                       <div class="improveBox">
-                                                          <div class="msgBox bottom10">       
-                                                            <%= response.audit.metaDesc %>
-                                                          </div>
-                                                       </div>
-                                                    </div>
-                                                </div>
-
-                                                <!--URL-->
-                                                <div class="seoBox">
-                                                    <div class="headBox clearfix">
-                                                    <h4 class="titleStr">URL</h4>
-                                                    <h4 class="solveMsg" data-original-title="Easy to solve" data-toggle="tooltip" data-placement="top">
-                                                        <i class="fa fa-gear fa-xs solveMsgBlue"></i>
-                                                        <i class="fa fa-gear fa-xs "></i>
-                                                        <i class="fa fa-gear fa-xs "></i>
-                                                    </h4>
-                                                    </div>
-                                                    <div class="contentBox" id="seoBox1">
-                                                    <div class="improveBox">
-                                                        <div class="msgBox bottom10">       
-                                                            <%= response.audit.URL %>
+                                                <div class="gdlr-core-pbf-element">
+                                                    <div class="gdlr-core-divider-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-divider-item-normal" style="padding-bottom: 40px;">
+                                                        <div class="gdlr-core-divider-container gdlr-core-center-align" style="max-width: 82px;">
+                                                            <div class="gdlr-core-divider-line gdlr-core-skin-divider" style="border-color: #ff4800;border-bottom-width: 3px;"></div>
                                                         </div>
-                                                    </div>
-                                                    </div>
-                                                </div>
-
-                                                <!--Report Generation Time-->
-                                                <div class="seoBox">
-                                                    <div class="headBox clearfix">
-                                                    <h4 class="titleStr">Report Generation Time</h4>
-                                                    <h4 class="solveMsg" data-original-title="Easy to solve" data-toggle="tooltip" data-placement="top">
-                                                        <i class="fa fa-gear fa-xs solveMsgBlue"></i>
-                                                        <i class="fa fa-gear fa-xs "></i>
-                                                        <i class="fa fa-gear fa-xs "></i>
-                                                    </h4>
-                                                    </div>
-                                                    <div class="contentBox" id="seoBox1">
-                                                    <div class="improveBox">
-                                                        <div class="msgBox bottom10">       
-                                                            <%= response.audit.reportGenerationTime %>
-                                                        </div>
-                                                    </div>
-                                                    </div>
-                                                </div>
-
-                                                <!--Alt Attributes-->
-                                                <div class="seoBox">
-                                                    <div class="headBox clearfix">
-                                                    <h4 class="titleStr">Alt Attributes</h4>
-                                                    <h4 class="solveMsg" data-original-title="Easy to solve" data-toggle="tooltip" data-placement="top">
-                                                        <i class="fa fa-gear fa-xs solveMsgBlue"></i>
-                                                        <i class="fa fa-gear fa-xs "></i>
-                                                        <i class="fa fa-gear fa-xs "></i>
-                                                    </h4>
-                                                    </div>
-                                                    <div class="contentBox" id="seoBox1">
-                                                    <div class="improveBox">
-                                                        <div class="msgBox bottom10">       
-                                                            <%= response.audit.altAttr %>
-                                                        </div>
-                                                    </div>
-                                                    </div>
-                                                </div>
-                                                
-                                                <!--Text & Html Ratio-->
-                                                <div class="seoBox">
-                                                    <div class="headBox clearfix">
-                                                    <h4 class="titleStr">Text &amp; Html Ratio</h4>
-                                                    <h4 class="solveMsg" data-original-title="Easy to solve" data-toggle="tooltip" data-placement="top">
-                                                        <i class="fa fa-gear fa-xs solveMsgBlue"></i>
-                                                        <i class="fa fa-gear fa-xs "></i>
-                                                        <i class="fa fa-gear fa-xs "></i>
-                                                    </h4>
-                                                    </div>
-                                                    <div class="contentBox" id="seoBox1">
-                                                    <div class="improveBox">
-                                                        <div class="msgBox bottom10">       
-                                                            <%= response.audit.textHtmlRatio %>
-                                                        </div>
-                                                    </div>
-                                                    </div>
-                                                </div>
-
-                                                <!--GZIP Compression-->
-                                                <div class="seoBox">
-                                                    <div class="headBox clearfix">
-                                                    <h4 class="titleStr">GZIP Compression</h4>
-                                                    <h4 class="solveMsg" data-original-title="Easy to solve" data-toggle="tooltip" data-placement="top">
-                                                        <i class="fa fa-gear fa-xs solveMsgBlue"></i>
-                                                        <i class="fa fa-gear fa-xs "></i>
-                                                        <i class="fa fa-gear fa-xs "></i>
-                                                    </h4>
-                                                    </div>
-                                                    <div class="contentBox" id="seoBox1">
-                                                    <div class="improveBox">
-                                                        <div class="msgBox bottom10">       
-                                                            <%= response.audit.gzipCompression %>
-                                                        </div>
-                                                    </div>
-                                                    </div>
-                                                </div>
-
-                                                <!--WWW Resolve-->
-                                                <div class="seoBox">
-                                                    <div class="headBox clearfix">
-                                                    <h4 class="titleStr">WWW Resolve</h4>
-                                                    <h4 class="solveMsg" data-original-title="Easy to solve" data-toggle="tooltip" data-placement="top">
-                                                        <i class="fa fa-gear fa-xs solveMsgBlue"></i>
-                                                        <i class="fa fa-gear fa-xs "></i>
-                                                        <i class="fa fa-gear fa-xs "></i>
-                                                    </h4>
-                                                    </div>
-                                                    <div class="contentBox" id="seoBox1">
-                                                    <div class="improveBox">
-                                                        <div class="msgBox bottom10">       
-                                                            <%= response.audit.wwwResolve %>
-                                                        </div>
-                                                    </div>
-                                                    </div>
-                                                </div>
-
-                                                <!--IP Canonicalization-->
-                                                <div class="seoBox">
-                                                    <div class="headBox clearfix">
-                                                    <h4 class="titleStr">IP Canonicalization</h4>
-                                                    <h4 class="solveMsg" data-original-title="Easy to solve" data-toggle="tooltip" data-placement="top">
-                                                        <i class="fa fa-gear fa-xs solveMsgBlue"></i>
-                                                        <i class="fa fa-gear fa-xs "></i>
-                                                        <i class="fa fa-gear fa-xs "></i>
-                                                    </h4>
-                                                    </div>
-                                                    <div class="contentBox" id="seoBox1">
-                                                    <div class="improveBox">
-                                                        <div class="msgBox bottom10">       
-                                                            <%= response.audit.ipCanonicalization %>
-                                                        </div>
-                                                    </div>
-                                                    </div>
-                                                </div>
-
-                                                <!--Broken Link-->
-                                                <div class="seoBox">
-                                                    <div class="headBox clearfix">
-                                                    <h4 class="titleStr">Broken Link</h4>
-                                                    <h4 class="solveMsg" data-original-title="Easy to solve" data-toggle="tooltip" data-placement="top">
-                                                        <i class="fa fa-gear fa-xs solveMsgBlue"></i>
-                                                        <i class="fa fa-gear fa-xs "></i>
-                                                        <i class="fa fa-gear fa-xs "></i>
-                                                    </h4>
-                                                    </div>
-                                                    <div class="contentBox" id="seoBox1">
-                                                    <div class="improveBox">
-                                                        <div class="msgBox bottom10">       
-                                                            <%= response.audit.brokenLink %>
-                                                        </div>
-                                                    </div>
-                                                    </div>
-                                                </div>
-                                                
-                                                <!--XML Sitemap-->
-                                                <div class="seoBox">
-                                                    <div class="headBox clearfix">
-                                                    <h4 class="titleStr">XML Sitemap</h4>
-                                                    <h4 class="solveMsg" data-original-title="Easy to solve" data-toggle="tooltip" data-placement="top">
-                                                        <i class="fa fa-gear fa-xs solveMsgBlue"></i>
-                                                        <i class="fa fa-gear fa-xs "></i>
-                                                        <i class="fa fa-gear fa-xs "></i>
-                                                    </h4>
-                                                    </div>
-                                                    <div class="contentBox" id="seoBox1">
-                                                    <div class="improveBox">
-                                                        <div class="msgBox bottom10">       
-                                                            <%= response.audit.xmlSitemap %>
-                                                        </div>
-                                                    </div>
-                                                    </div>
-                                                </div>
-
-                                                <!--Robots.txt-->
-                                                <div class="seoBox">
-                                                    <div class="headBox clearfix">
-                                                    <h4 class="titleStr">Robots.txt</h4>
-                                                    <h4 class="solveMsg" data-original-title="Easy to solve" data-toggle="tooltip" data-placement="top">
-                                                        <i class="fa fa-gear fa-xs solveMsgBlue"></i>
-                                                        <i class="fa fa-gear fa-xs "></i>
-                                                        <i class="fa fa-gear fa-xs "></i>
-                                                    </h4>
-                                                    </div>
-                                                    <div class="contentBox" id="seoBox1">
-                                                    <div class="improveBox">
-                                                        <div class="msgBox bottom10">       
-                                                            <%= response.audit.robotsTxt %>
-                                                        </div>
-                                                    </div>
-                                                    </div>
-                                                </div>
-
-                                                <!--URL Rewrite-->
-                                                <div class="seoBox">
-                                                    <div class="headBox clearfix">
-                                                    <h4 class="titleStr">URL Rewrite</h4>
-                                                    <h4 class="solveMsg" data-original-title="Easy to solve" data-toggle="tooltip" data-placement="top">
-                                                        <i class="fa fa-gear fa-xs solveMsgBlue"></i>
-                                                        <i class="fa fa-gear fa-xs "></i>
-                                                        <i class="fa fa-gear fa-xs "></i>
-                                                    </h4>
-                                                    </div>
-                                                    <div class="contentBox" id="seoBox1">
-                                                    <div class="improveBox">
-                                                        <div class="msgBox bottom10">       
-                                                            <%= response.audit.urlRewrite %>
-                                                        </div>
-                                                    </div>
-                                                    </div>
-                                                </div>
-
-                                                <!--Underscores In URL-->
-                                                <div class="seoBox">
-                                                    <div class="headBox clearfix">
-                                                    <h4 class="titleStr">Underscores In URL</h4>
-                                                    <h4 class="solveMsg" data-original-title="Easy to solve" data-toggle="tooltip" data-placement="top">
-                                                        <i class="fa fa-gear fa-xs solveMsgBlue"></i>
-                                                        <i class="fa fa-gear fa-xs "></i>
-                                                        <i class="fa fa-gear fa-xs "></i>
-                                                    </h4>
-                                                    </div>
-                                                    <div class="contentBox" id="seoBox1">
-                                                    <div class="improveBox">
-                                                        <div class="msgBox bottom10">       
-                                                            <%= response.audit.underscoresInUrl %>
-                                                        </div>
-                                                    </div>
-                                                    </div>
-                                                </div>
-
-                                                <!--Embedded Objects-->
-                                                <div class="seoBox">
-                                                    <div class="headBox clearfix">
-                                                    <h4 class="titleStr">Embedded Objects</h4>
-                                                    <h4 class="solveMsg" data-original-title="Easy to solve" data-toggle="tooltip" data-placement="top">
-                                                        <i class="fa fa-gear fa-xs solveMsgBlue"></i>
-                                                        <i class="fa fa-gear fa-xs "></i>
-                                                        <i class="fa fa-gear fa-xs "></i>
-                                                    </h4>
-                                                    </div>
-                                                    <div class="contentBox" id="seoBox1">
-                                                    <div class="improveBox">
-                                                        <div class="msgBox bottom10">       
-                                                            <%= response.audit.embeddedObjects %>
-                                                        </div>
-                                                    </div>
-                                                    </div>
-                                                </div>
-
-                                                <!--Iframe-->
-                                                <div class="seoBox">
-                                                    <div class="headBox clearfix">
-                                                    <h4 class="titleStr">Iframe</h4>
-                                                    <h4 class="solveMsg" data-original-title="Easy to solve" data-toggle="tooltip" data-placement="top">
-                                                        <i class="fa fa-gear fa-xs solveMsgBlue"></i>
-                                                        <i class="fa fa-gear fa-xs "></i>
-                                                        <i class="fa fa-gear fa-xs "></i>
-                                                    </h4>
-                                                    </div>
-                                                    <div class="contentBox" id="seoBox1">
-                                                    <div class="improveBox">
-                                                        <div class="msgBox bottom10">       
-                                                            <%= response.audit.iFrame %>
-                                                        </div>
-                                                    </div>
-                                                    </div>
-                                                </div>
-
-                                                <!--Domain Registration-->
-                                                <div class="seoBox">
-                                                    <div class="headBox clearfix">
-                                                    <h4 class="titleStr">Domain Registration</h4>
-                                                    <h4 class="solveMsg" data-original-title="Easy to solve" data-toggle="tooltip" data-placement="top">
-                                                        <i class="fa fa-gear fa-xs solveMsgBlue"></i>
-                                                        <i class="fa fa-gear fa-xs "></i>
-                                                        <i class="fa fa-gear fa-xs "></i>
-                                                    </h4>
-                                                    </div>
-                                                    <div class="contentBox" id="seoBox1">
-                                                    <div class="improveBox">
-                                                        <div class="msgBox bottom10">       
-                                                            <%= response.audit.domainRegistration %>
-                                                        </div>
-                                                    </div>
-                                                    </div>
-                                                </div>
-
-                                                <!--Mobile Friendliness-->
-                                                <div class="seoBox">
-                                                    <div class="headBox clearfix">
-                                                    <h4 class="titleStr">Mobile Friendliness</h4>
-                                                    <h4 class="solveMsg" data-original-title="Easy to solve" data-toggle="tooltip" data-placement="top">
-                                                        <i class="fa fa-gear fa-xs solveMsgBlue"></i>
-                                                        <i class="fa fa-gear fa-xs "></i>
-                                                        <i class="fa fa-gear fa-xs "></i>
-                                                    </h4>
-                                                    </div>
-                                                    <div class="contentBox" id="seoBox1">
-                                                    <div class="improveBox">
-                                                        <div class="msgBox bottom10">       
-                                                            <%= response.audit.mobileFriendliness %>
-                                                        </div>
-                                                    </div>
-                                                    </div>
-                                                </div>
-
-                                                <!--Favicon-->
-                                                <div class="seoBox">
-                                                    <div class="headBox clearfix">
-                                                    <h4 class="titleStr">Favicon</h4>
-                                                    <h4 class="solveMsg" data-original-title="Easy to solve" data-toggle="tooltip" data-placement="top">
-                                                        <i class="fa fa-gear fa-xs solveMsgBlue"></i>
-                                                        <i class="fa fa-gear fa-xs "></i>
-                                                        <i class="fa fa-gear fa-xs "></i>
-                                                    </h4>
-                                                    </div>
-                                                    <div class="contentBox" id="seoBox1">
-                                                    <div class="improveBox">
-                                                        <div class="msgBox bottom10">       
-                                                            <%= response.audit.favicon %>
-                                                        </div>
-                                                    </div>
-                                                    </div>
-                                                </div>
-                                                
-                                                <!--Custom 404 Page-->
-                                                <div class="seoBox">
-                                                    <div class="headBox clearfix">
-                                                    <h4 class="titleStr">Custom 404 Page</h4>
-                                                    <h4 class="solveMsg" data-original-title="Easy to solve" data-toggle="tooltip" data-placement="top">
-                                                        <i class="fa fa-gear fa-xs solveMsgBlue"></i>
-                                                        <i class="fa fa-gear fa-xs "></i>
-                                                        <i class="fa fa-gear fa-xs "></i>
-                                                    </h4>
-                                                    </div>
-                                                    <div class="contentBox" id="seoBox1">
-                                                    <div class="improveBox">
-                                                        <div class="msgBox bottom10">       
-                                                            <%= response.audit.custome404Page %>
-                                                        </div>
-                                                    </div>
-                                                    </div>
-                                                </div>
-
-                                                <!--Page Size-->
-                                                <div class="seoBox">
-                                                    <div class="headBox clearfix">
-                                                    <h4 class="titleStr">Page Size</h4>
-                                                    <h4 class="solveMsg" data-original-title="Easy to solve" data-toggle="tooltip" data-placement="top">
-                                                        <i class="fa fa-gear fa-xs solveMsgBlue"></i>
-                                                        <i class="fa fa-gear fa-xs "></i>
-                                                        <i class="fa fa-gear fa-xs "></i>
-                                                    </h4>
-                                                    </div>
-                                                    <div class="contentBox" id="seoBox1">
-                                                    <div class="improveBox">
-                                                        <div class="msgBox bottom10">       
-                                                            <%= response.audit.pageSize %>
-                                                        </div>
-                                                    </div>
-                                                    </div>
-                                                </div>
-
-                                                <!--Load Time-->
-                                                <div class="seoBox">
-                                                    <div class="headBox clearfix">
-                                                    <h4 class="titleStr">Load Time</h4>
-                                                    <h4 class="solveMsg" data-original-title="Easy to solve" data-toggle="tooltip" data-placement="top">
-                                                        <i class="fa fa-gear fa-xs solveMsgBlue"></i>
-                                                        <i class="fa fa-gear fa-xs "></i>
-                                                        <i class="fa fa-gear fa-xs "></i>
-                                                    </h4>
-                                                    </div>
-                                                    <div class="contentBox" id="seoBox1">
-                                                    <div class="improveBox">
-                                                        <div class="msgBox bottom10">       
-                                                            <%= response.audit.loadTime %>
-                                                        </div>
-                                                    </div>
-                                                    </div>
-                                                </div>
-
-                                                <!--Language-->
-                                                <div class="seoBox">
-                                                    <div class="headBox clearfix">
-                                                    <h4 class="titleStr">Language</h4>
-                                                    <h4 class="solveMsg" data-original-title="Easy to solve" data-toggle="tooltip" data-placement="top">
-                                                        <i class="fa fa-gear fa-xs solveMsgBlue"></i>
-                                                        <i class="fa fa-gear fa-xs "></i>
-                                                        <i class="fa fa-gear fa-xs "></i>
-                                                    </h4>
-                                                    </div>
-                                                    <div class="contentBox" id="seoBox1">
-                                                    <div class="improveBox">
-                                                        <div class="msgBox bottom10">       
-                                                            <%= response.audit.language %>
-                                                        </div>
-                                                    </div>
-                                                    </div>
-                                                </div>
-
-                                                <!--Email Privacy-->
-                                                <div class="seoBox">
-                                                    <div class="headBox clearfix">
-                                                    <h4 class="titleStr">Email Privacy</h4>
-                                                    <h4 class="solveMsg" data-original-title="Easy to solve" data-toggle="tooltip" data-placement="top">
-                                                        <i class="fa fa-gear fa-xs solveMsgBlue"></i>
-                                                        <i class="fa fa-gear fa-xs "></i>
-                                                        <i class="fa fa-gear fa-xs "></i>
-                                                    </h4>
-                                                    </div>
-                                                    <div class="contentBox" id="seoBox1">
-                                                    <div class="improveBox">
-                                                        <div class="msgBox bottom10">       
-                                                            <%= response.audit.emailPrivacy %>
-                                                        </div>
-                                                    </div>
-                                                    </div>
-                                                </div>
-
-                                                <!--Safe Browsing-->
-                                                <div class="seoBox">
-                                                    <div class="headBox clearfix">
-                                                    <h4 class="titleStr">Safe Browsing</h4>
-                                                    <h4 class="solveMsg" data-original-title="Easy to solve" data-toggle="tooltip" data-placement="top">
-                                                        <i class="fa fa-gear fa-xs solveMsgBlue"></i>
-                                                        <i class="fa fa-gear fa-xs "></i>
-                                                        <i class="fa fa-gear fa-xs "></i>
-                                                    </h4>
-                                                    </div>
-                                                    <div class="contentBox" id="seoBox1">
-                                                    <div class="improveBox">
-                                                        <div class="msgBox bottom10">       
-                                                            <%= response.audit.safeBrowsing %>
-                                                        </div>
-                                                    </div>
-                                                    </div>
-                                                </div>
-
-                                                <!--Server IP-->
-                                                <div class="seoBox">
-                                                    <div class="headBox clearfix">
-                                                    <h4 class="titleStr">Server IP</h4>
-                                                    <h4 class="solveMsg" data-original-title="Easy to solve" data-toggle="tooltip" data-placement="top">
-                                                        <i class="fa fa-gear fa-xs solveMsgBlue"></i>
-                                                        <i class="fa fa-gear fa-xs "></i>
-                                                        <i class="fa fa-gear fa-xs "></i>
-                                                    </h4>
-                                                    </div>
-                                                    <div class="contentBox" id="seoBox1">
-                                                    <div class="improveBox">
-                                                        <div class="msgBox bottom10">       
-                                                            <%= response.audit.serverIp %>
-                                                        </div>
-                                                    </div>
-                                                    </div>
-                                                </div>
-
-                                                <!--Analytics-->
-                                                <div class="seoBox">
-                                                    <div class="headBox clearfix">
-                                                    <h4 class="titleStr">Analytics</h4>
-                                                    <h4 class="solveMsg" data-original-title="Easy to solve" data-toggle="tooltip" data-placement="top">
-                                                        <i class="fa fa-gear fa-xs solveMsgBlue"></i>
-                                                        <i class="fa fa-gear fa-xs "></i>
-                                                        <i class="fa fa-gear fa-xs "></i>
-                                                    </h4>
-                                                    </div>
-                                                    <div class="contentBox" id="seoBox1">
-                                                    <div class="improveBox">
-                                                        <div class="msgBox bottom10">       
-                                                            <%= response.audit.analytics %>
-                                                        </div>
-                                                    </div>
-                                                    </div>
-                                                </div>
-
-                                                <!--W3C Validate-->
-                                                <div class="seoBox">
-                                                    <div class="headBox clearfix">
-                                                    <h4 class="titleStr">W3C Validate</h4>
-                                                    <h4 class="solveMsg" data-original-title="Easy to solve" data-toggle="tooltip" data-placement="top">
-                                                        <i class="fa fa-gear fa-xs solveMsgBlue"></i>
-                                                        <i class="fa fa-gear fa-xs "></i>
-                                                        <i class="fa fa-gear fa-xs "></i>
-                                                    </h4>
-                                                    </div>
-                                                    <div class="contentBox" id="seoBox1">
-                                                    <div class="improveBox">
-                                                        <div class="msgBox bottom10">       
-                                                            <%= response.audit.w3cValidate %>
-                                                        </div>
-                                                    </div>
-                                                    </div>
-                                                </div>
-
-                                                <!--DocType-->
-                                                <div class="seoBox">
-                                                    <div class="headBox clearfix">
-                                                    <h4 class="titleStr">DocType</h4>
-                                                    <h4 class="solveMsg" data-original-title="Easy to solve" data-toggle="tooltip" data-placement="top">
-                                                        <i class="fa fa-gear fa-xs solveMsgBlue"></i>
-                                                        <i class="fa fa-gear fa-xs "></i>
-                                                        <i class="fa fa-gear fa-xs "></i>
-                                                    </h4>
-                                                    </div>
-                                                    <div class="contentBox" id="seoBox1">
-                                                    <div class="improveBox">
-                                                        <div class="msgBox bottom10">       
-                                                            <%= response.audit.docType %>
-                                                        </div>
-                                                    </div>
-                                                    </div>
-                                                </div>
-
-                                                <!--Encoding-->
-                                                <div class="seoBox">
-                                                    <div class="headBox clearfix">
-                                                    <h4 class="titleStr">Encoding</h4>
-                                                    <h4 class="solveMsg" data-original-title="Easy to solve" data-toggle="tooltip" data-placement="top">
-                                                        <i class="fa fa-gear fa-xs solveMsgBlue"></i>
-                                                        <i class="fa fa-gear fa-xs "></i>
-                                                        <i class="fa fa-gear fa-xs "></i>
-                                                    </h4>
-                                                    </div>
-                                                    <div class="contentBox" id="seoBox1">
-                                                    <div class="improveBox">
-                                                        <div class="msgBox bottom10">       
-                                                            <%= response.audit.encoding %>
-                                                        </div>
-                                                    </div>
-                                                    </div>
-                                                </div>
-
-                                                <!--Traffic Based Rank-->
-                                                <div class="seoBox">
-                                                    <div class="headBox clearfix">
-                                                    <h4 class="titleStr">Traffic Based Rank</h4>
-                                                    <h4 class="solveMsg" data-original-title="Easy to solve" data-toggle="tooltip" data-placement="top">
-                                                        <i class="fa fa-gear fa-xs solveMsgBlue"></i>
-                                                        <i class="fa fa-gear fa-xs "></i>
-                                                        <i class="fa fa-gear fa-xs "></i>
-                                                    </h4>
-                                                    </div>
-                                                    <div class="contentBox" id="seoBox1">
-                                                    <div class="improveBox">
-                                                        <div class="msgBox bottom10">       
-                                                            <%= response.audit.trafficBasedRank %>
-                                                        </div>
-                                                    </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -730,17 +125,878 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    <% } else{ %>  
+                        <div id="printReport" class="gdlr-core-pbf-wrapper " style="padding: 150px 0px 0px 0px;">
+                            <div class="gdlr-core-pbf-wrapper-content gdlr-core-js ">
+                                <div class="gdlr-core-pbf-wrapper-container clearfix gdlr-core-container">
+                                    <div class="gdlr-core-pbf-column gdlr-core-column-60 gdlr-core-column-first">
+                                        <div class="gdlr-core-pbf-column-content-margin gdlr-core-js ">
+                                            <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js " style="max-width: 805px;">
+                                                <div class="gdlr-core-pbf-element">
+                                                    <div class="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-center-align gdlr-core-title-item-caption-top gdlr-core-item-pdlr" style="padding-bottom: 25px;">
+                                                        <div class="gdlr-core-title-item-title-wrap ">
+                                                            <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " style="font-size: 33px;font-weight: 600;letter-spacing: 0px;text-transform: none;"><%= response.message %><span class="gdlr-core-title-item-title-divider gdlr-core-skin-divider"></span></h3></div>
+                                                    </div>
+                                                </div>
+                                                <div class="gdlr-core-pbf-element">
+                                                    <div class="gdlr-core-divider-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-divider-item-normal" style="padding-bottom: 40px;">
+                                                        <div class="gdlr-core-divider-container gdlr-core-center-align" style="max-width: 82px;">
+                                                            <div class="gdlr-core-divider-line gdlr-core-skin-divider" style="border-color: #ff4800;border-bottom-width: 3px;"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="gdlr-core-pbf-column gdlr-core-column-first">
+                                        <div class="gdlr-core-pbf-column-content-margin gdlr-core-js ">
+                                            <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js ">
+                                                <div class="gdlr-core-pbf-element">
+                                                    <table class="table table-hover table-bordered server-table-striped">
+                                                        <tbody>
+                                                            <tr>
+                                                                <th><span class="scoreProgress-label passedBox">Passed</span></th>
+                                                                <th><span class="scoreProgress-label improveBox">To Improve</span></th>
+                                                                <th><span class="scoreProgress-label errorBox">Errors</span></th>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><p id="passedMarkss" class="seoMarks"></p></td>
+                                                                <td><p id="improveMarkss" class="seoMarks"></p></td>
+                                                                <td><p id="errorMarkss" class="seoMarks"></p></td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>                                                
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="gdlr-core-pbf-column gdlr-core-column-first">
+                                        <div class="gdlr-core-pbf-column-content-margin gdlr-core-js ">
+                                            <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js ">
+                                                <div class="gdlr-core-pbf-element">
+                                                    
+                                                    <!--Title-->
+                                                    <div class="seoBox">
+                                                        <div class="headBox clearfix">
+                                                           <h4 class="titleStr">Title Tag</h4>
+                                                           <h4 class="solveMsg" data-original-title="Easy to solve" data-toggle="tooltip" data-placement="top">
+                                                              <i class="fa fa-gear fa-xs solveMsgBlue"></i>
+                                                              <i class="fa fa-gear fa-xs "></i>
+                                                              <i class="fa fa-gear fa-xs "></i>
+                                                           </h4>
+                                                        </div>
+                                                        <div class="contentBox" id="seoBox1">
+                                                            <% var temp = response.audit.title %>
+                                                            <% var count = (temp.match(/No Title/g) || []).length; %>
+                                                            <% if(count > 0){ %>
+                                                            <div class="improveBox">
+                                                              <% } else{ %>  
+                                                            <div class="passedBox">
+                                                            <% } %>
+                                                                <div class="msgBox bottom10">       
+                                                                    <%= response.audit.title %>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+    
+                                                    <!--Meta Description-->
+                                                    <div class="seoBox">
+                                                        <div class="headBox clearfix">
+                                                           <h4 class="titleStr">Meta Description</h4>
+                                                           <h4 class="solveMsg" data-original-title="Easy to solve" data-toggle="tooltip" data-placement="top">
+                                                              <i class="fa fa-gear fa-xs solveMsgBlue"></i>
+                                                              <i class="fa fa-gear fa-xs "></i>
+                                                              <i class="fa fa-gear fa-xs "></i>
+                                                           </h4>
+                                                        </div>
+                                                        <div class="contentBox" id="seoBox1">
+                                                            <% var temp = response.audit.metaDesc %>
+                                                            <% var count = (temp.match(/No Description/g) || []).length; %>
+                                                            <% if(count > 0){ %>
+                                                            <div class="improveBox">
+                                                              <% } else{ %>  
+                                                            <div class="passedBox">
+                                                            <% } %>
+                                                                <div class="msgBox bottom10">       
+                                                                <%= response.audit.metaDesc %>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    <!--Headings-->
+                                                    <div class="seoBox">
+                                                        <div class="headBox clearfix">
+                                                           <h4 class="titleStr">Headings</h4>
+                                                           <h4 class="solveMsg" data-original-title="Easy to solve" data-toggle="tooltip" data-placement="top">
+                                                              <i class="fa fa-gear fa-xs solveMsgBlue"></i>
+                                                              <i class="fa fa-gear fa-xs "></i>
+                                                              <i class="fa fa-gear fa-xs "></i>
+                                                           </h4>
+                                                        </div>
+                                                        <div class="contentBox" id="seoBox1">
+                                                            <% if(response.audit.headings.h1 > 0){ %>
+                                                                <div class="passedBox">
+                                                              <% } else{ %>  
+                                                                <div class="improveBox">
+                                                            <% } %>
+                                                              <div class="msgBox bottom10">       
+                                                                <table class="table table-hover table-bordered server-table-striped">
+                                                                    <tbody>
+                                                                       <tr>
+                                                                          <th>< h1 ></th>
+                                                                          <th>< h2 ></th>
+                                                                          <th>< h3 ></th>
+                                                                          <th>< h4 ></th>
+                                                                          <th>< h5 ></th>
+                                                                          <th>< h6 ></th>
+                                                                       </tr>
+                                                                       <tr>
+                                                                          <td><%= response.audit.headings.h1 %></td>
+                                                                          <td><%= response.audit.headings.h2 %></td>
+                                                                          <td><%= response.audit.headings.h3 %></td>
+                                                                          <td><%= response.audit.headings.h4 %></td>
+                                                                          <td><%= response.audit.headings.h5 %></td>
+                                                                          <td><%= response.audit.headings.h6 %></td>
+                                                                       </tr>
+                                                                    </tbody>
+                                                                 </table>
+                                                              </div>
+                                                           </div>
+                                                        </div>
+                                                    </div>
+    
+                                                    <!--URL-->
+                                                    <div class="seoBox">
+                                                        <div class="headBox clearfix">
+                                                        <h4 class="titleStr">URL</h4>
+                                                        <h4 class="solveMsg" data-original-title="Easy to solve" data-toggle="tooltip" data-placement="top">
+                                                            <i class="fa fa-gear fa-xs solveMsgBlue"></i>
+                                                            <i class="fa fa-gear fa-xs "></i>
+                                                            <i class="fa fa-gear fa-xs "></i>
+                                                        </h4>
+                                                        </div>
+                                                        <div class="contentBox" id="seoBox1">
+                                                        <div class="lowImpactBox">
+                                                            <div class="msgBox bottom10">       
+                                                                <a href="http://<%= response.audit.URL %>" style="color:#25B7D3">http://<%= response.audit.URL %> </a>
+                                                                <br>
+                                                                <b>Length</b> <%= (response.audit.URL).length %> Characters
+                                                            </div>
+                                                        </div>
+                                                        </div>
+                                                    </div>
+    
+                                                    <!--Report Generation Time-->
+                                                    <div class="seoBox">
+                                                        <div class="headBox clearfix">
+                                                        <h4 class="titleStr">Report Generation Time</h4>
+                                                        <h4 class="solveMsg" data-original-title="Easy to solve" data-toggle="tooltip" data-placement="top">
+                                                            <i class="fa fa-gear fa-xs solveMsgBlue"></i>
+                                                            <i class="fa fa-gear fa-xs "></i>
+                                                            <i class="fa fa-gear fa-xs "></i>
+                                                        </h4>
+                                                        </div>
+                                                        <div class="contentBox" id="seoBox1">
+                                                        <div class="lowImpactBox">
+                                                            <div class="msgBox bottom10">       
+                                                                <%= response.audit.reportGenerationTime %>
+                                                            </div>
+                                                        </div>
+                                                        </div>
+                                                    </div>
+    
+                                                    <!--Alt Attributes-->
+                                                    <div class="seoBox">
+                                                        <div class="headBox clearfix">
+                                                        <h4 class="titleStr">Alt Attributes</h4>
+                                                        <h4 class="solveMsg" data-original-title="Easy to solve" data-toggle="tooltip" data-placement="top">
+                                                            <i class="fa fa-gear fa-xs solveMsgBlue"></i>
+                                                            <i class="fa fa-gear fa-xs "></i>
+                                                            <i class="fa fa-gear fa-xs "></i>
+                                                        </h4>
+                                                        </div>
+                                                        <div class="contentBox" id="seoBox1">
+                                                            <% var temp = response.audit.altAttr %>
+                                                            <% var count = (temp.match(/We found 0/g) || []).length; %>
+                                                            <% if(count > 0){ %>
+                                                            <div class="passedBox">
+                                                              <% } else{ %>  
+                                                            <div class="errorBox">
+                                                            <% } %>
+                                                                <div class="msgBox bottom10">       
+                                                                    <%- response.audit.altAttr %>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    <!--Text & Html Ratio-->
+                                                    <div class="seoBox">
+                                                        <div class="headBox clearfix">
+                                                        <h4 class="titleStr">Text &amp; Html Ratio</h4>
+                                                        <h4 class="solveMsg" data-original-title="Easy to solve" data-toggle="tooltip" data-placement="top">
+                                                            <i class="fa fa-gear fa-xs solveMsgBlue"></i>
+                                                            <i class="fa fa-gear fa-xs "></i>
+                                                            <i class="fa fa-gear fa-xs "></i>
+                                                        </h4>
+                                                        </div>
+                                                        <div class="contentBox" id="seoBox1">
+                                                            <% if(response.audit.textHtmlRatio > 10){ %>
+                                                            <div class="passedBox">
+                                                            <% } else{ %>  
+                                                            <div class="improveBox">
+                                                            <% } %>
+                                                                <div class="msgBox bottom10">       
+                                                                    HTML to Text Ratio is: <b><%= response.audit.textHtmlRatio %>% </b>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+    
+                                                    <!--GZIP Compression-->
+                                                    <div class="seoBox">
+                                                        <div class="headBox clearfix">
+                                                        <h4 class="titleStr">GZIP Compression</h4>
+                                                        <h4 class="solveMsg" data-original-title="Easy to solve" data-toggle="tooltip" data-placement="top">
+                                                            <i class="fa fa-gear fa-xs solveMsgBlue"></i>
+                                                            <i class="fa fa-gear fa-xs "></i>
+                                                            <i class="fa fa-gear fa-xs "></i>
+                                                        </h4>
+                                                        </div>
+                                                        <div class="contentBox" id="seoBox1">
+                                                        <% var temp = response.audit.gzipCompression %>
+                                                        <% var count = (temp.match(/Wow!/g) || []).length; %>
+                                                        <% if(count > 0){ %>
+                                                        <div class="passedBox">
+                                                            <% } else{ %>  
+                                                        <div class="errorBox">
+                                                        <% } %>
+                                                            <div class="msgBox bottom10">       
+                                                                <%= response.audit.gzipCompression %>
+                                                            </div>
+                                                        </div>
+                                                        </div>
+                                                    </div>
+    
+                                                    <!--WWW Resolve-->
+                                                    <div class="seoBox">
+                                                        <div class="headBox clearfix">
+                                                        <h4 class="titleStr">WWW Resolve</h4>
+                                                        <h4 class="solveMsg" data-original-title="Easy to solve" data-toggle="tooltip" data-placement="top">
+                                                            <i class="fa fa-gear fa-xs solveMsgBlue"></i>
+                                                            <i class="fa fa-gear fa-xs "></i>
+                                                            <i class="fa fa-gear fa-xs "></i>
+                                                        </h4>
+                                                        </div>
+                                                        <div class="contentBox" id="seoBox1">
+                                                        <% var temp = response.audit.wwwResolve %>
+                                                        <% var count = (temp.match(/Great/g) || []).length; %>
+                                                        <% if(count > 0){ %>
+                                                        <div class="passedBox">
+                                                            <% } else{ %>  
+                                                        <div class="errorBox">
+                                                        <% } %>
+                                                            <div class="msgBox bottom10">       
+                                                                <%= response.audit.wwwResolve %>
+                                                            </div>
+                                                        </div>
+                                                        </div>
+                                                    </div>
+    
+                                                    <!--IP Canonicalization-->
+                                                    <div class="seoBox">
+                                                        <div class="headBox clearfix">
+                                                        <h4 class="titleStr">IP Canonicalization</h4>
+                                                        <h4 class="solveMsg" data-original-title="Easy to solve" data-toggle="tooltip" data-placement="top">
+                                                            <i class="fa fa-gear fa-xs solveMsgBlue"></i>
+                                                            <i class="fa fa-gear fa-xs "></i>
+                                                            <i class="fa fa-gear fa-xs "></i>
+                                                        </h4>
+                                                        </div>
+                                                        <div class="contentBox" id="seoBox1">
+                                                        <% var temp = response.audit.ipCanonicalization %>
+                                                        <% var count = (temp.match(/No/g) || []).length; %>
+                                                        <% if(count > 0){ %>
+                                                        <div class="errorBox">
+                                                            <% } else{ %>  
+                                                        <div class="passedBox">
+                                                        <% } %>
+                                                            <div class="msgBox bottom10">       
+                                                                <%= response.audit.ipCanonicalization %>
+                                                            </div>
+                                                        </div>
+                                                        </div>
+                                                    </div>
+    
+                                                    <!--Broken Link-->
+                                                    <div class="seoBox">
+                                                        <div class="headBox clearfix">
+                                                        <h4 class="titleStr">Broken Link</h4>
+                                                        <h4 class="solveMsg" data-original-title="Easy to solve" data-toggle="tooltip" data-placement="top">
+                                                            <i class="fa fa-gear fa-xs solveMsgBlue"></i>
+                                                            <i class="fa fa-gear fa-xs "></i>
+                                                            <i class="fa fa-gear fa-xs "></i>
+                                                        </h4>
+                                                        </div>
+                                                        <div class="contentBox" id="seoBox1">
+                                                        <% var temp = response.audit.brokenLink %>
+                                                        <% var count = (temp.match(/No broken link/g) || []).length; %>
+                                                        <% if(count > 0){ %>
+                                                        <div class="passedBox">
+                                                            <% } else{ %>  
+                                                        <div class="errorBox">
+                                                        <% } %>
+                                                            <div class="msgBox bottom10">       
+                                                                <%= response.audit.brokenLink %>
+                                                            </div>
+                                                        </div>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    <!--XML Sitemap-->
+                                                    <div class="seoBox">
+                                                        <div class="headBox clearfix">
+                                                        <h4 class="titleStr">XML Sitemap</h4>
+                                                        <h4 class="solveMsg" data-original-title="Easy to solve" data-toggle="tooltip" data-placement="top">
+                                                            <i class="fa fa-gear fa-xs solveMsgBlue"></i>
+                                                            <i class="fa fa-gear fa-xs "></i>
+                                                            <i class="fa fa-gear fa-xs "></i>
+                                                        </h4>
+                                                        </div>
+                                                        <div class="contentBox" id="seoBox1">
+                                                        <% var temp = response.audit.xmlSitemap %>
+                                                        <% var count = (temp.match(/Good/g) || []).length; %>
+                                                        <% if(count > 0){ %>
+                                                        <div class="passedBox">
+                                                            <% } else{ %>  
+                                                        <div class="errorBox">
+                                                        <% } %>
+                                                            <div class="msgBox bottom10">       
+                                                                <%= response.audit.xmlSitemap %>
+                                                            </div>
+                                                        </div>
+                                                        </div>
+                                                    </div>
+    
+                                                    <!--Robots.txt-->
+                                                    <div class="seoBox">
+                                                        <div class="headBox clearfix">
+                                                        <h4 class="titleStr">Robots.txt</h4>
+                                                        <h4 class="solveMsg" data-original-title="Easy to solve" data-toggle="tooltip" data-placement="top">
+                                                            <i class="fa fa-gear fa-xs solveMsgBlue"></i>
+                                                            <i class="fa fa-gear fa-xs "></i>
+                                                            <i class="fa fa-gear fa-xs "></i>
+                                                        </h4>
+                                                        </div>
+                                                        <div class="contentBox" id="seoBox1">
+                                                        <% var temp = response.audit.robotsTxt %>
+                                                        <% var count = (temp.match(/Good/g) || []).length; %>
+                                                        <% if(count > 0){ %>
+                                                        <div class="passedBox">
+                                                            <% } else{ %>  
+                                                        <div class="errorBox">
+                                                        <% } %>
+                                                            <div class="msgBox bottom10">       
+                                                                <%= response.audit.robotsTxt %>
+                                                            </div>
+                                                        </div>
+                                                        </div>
+                                                    </div>
+    
+                                                    <!--URL Rewrite-->
+                                                    <div class="seoBox">
+                                                        <div class="headBox clearfix">
+                                                        <h4 class="titleStr">URL Rewrite</h4>
+                                                        <h4 class="solveMsg" data-original-title="Easy to solve" data-toggle="tooltip" data-placement="top">
+                                                            <i class="fa fa-gear fa-xs solveMsgBlue"></i>
+                                                            <i class="fa fa-gear fa-xs "></i>
+                                                            <i class="fa fa-gear fa-xs "></i>
+                                                        </h4>
+                                                        </div>
+                                                        <div class="contentBox" id="seoBox1">
+                                                        <% var temp = response.audit.urlRewrite %>
+                                                        <% var count = (temp.match(/Good/g) || []).length; %>
+                                                        <% if(count > 0){ %>
+                                                        <div class="passedBox">
+                                                            <% } else{ %>  
+                                                        <div class="errorBox">
+                                                        <% } %>
+                                                            <div class="msgBox bottom10">       
+                                                                <%= response.audit.urlRewrite %>
+                                                            </div>
+                                                        </div>
+                                                        </div>
+                                                    </div>
+    
+                                                    <!--Underscores In URL-->
+                                                    <div class="seoBox">
+                                                        <div class="headBox clearfix">
+                                                        <h4 class="titleStr">Underscores In URL</h4>
+                                                        <h4 class="solveMsg" data-original-title="Easy to solve" data-toggle="tooltip" data-placement="top">
+                                                            <i class="fa fa-gear fa-xs solveMsgBlue"></i>
+                                                            <i class="fa fa-gear fa-xs "></i>
+                                                            <i class="fa fa-gear fa-xs "></i>
+                                                        </h4>
+                                                        </div>
+                                                        <div class="contentBox" id="seoBox1">
+                                                        <% var temp = response.audit.underscoresInUrl %>
+                                                        <% var count = (temp.match(/Great/g) || []).length; %>
+                                                        <% if(count > 0){ %>
+                                                        <div class="passedBox">
+                                                            <% } else{ %>  
+                                                        <div class="errorBox">
+                                                        <% } %>
+                                                            <div class="msgBox bottom10">       
+                                                                <%= response.audit.underscoresInUrl %>
+                                                            </div>
+                                                        </div>
+                                                        </div>
+                                                    </div>
+    
+                                                    <!--Embedded Objects-->
+                                                    <div class="seoBox">
+                                                        <div class="headBox clearfix">
+                                                        <h4 class="titleStr">Embedded Objects</h4>
+                                                        <h4 class="solveMsg" data-original-title="Easy to solve" data-toggle="tooltip" data-placement="top">
+                                                            <i class="fa fa-gear fa-xs solveMsgBlue"></i>
+                                                            <i class="fa fa-gear fa-xs "></i>
+                                                            <i class="fa fa-gear fa-xs "></i>
+                                                        </h4>
+                                                        </div>
+                                                        <div class="contentBox" id="seoBox1">
+                                                        <% var temp = response.audit.embeddedObjects %>
+                                                        <% var count = (temp.match(/Perfect/g) || []).length; %>
+                                                        <% if(count > 0){ %>
+                                                        <div class="passedBox">
+                                                            <% } else{ %>  
+                                                        <div class="errorBox">
+                                                        <% } %>
+                                                            <div class="msgBox bottom10">       
+                                                                <%= response.audit.embeddedObjects %>
+                                                            </div>
+                                                        </div>
+                                                        </div>
+                                                    </div>
+    
+                                                    <!--Iframe-->
+                                                    <div class="seoBox">
+                                                        <div class="headBox clearfix">
+                                                        <h4 class="titleStr">Iframe</h4>
+                                                        <h4 class="solveMsg" data-original-title="Easy to solve" data-toggle="tooltip" data-placement="top">
+                                                            <i class="fa fa-gear fa-xs solveMsgBlue"></i>
+                                                            <i class="fa fa-gear fa-xs "></i>
+                                                            <i class="fa fa-gear fa-xs "></i>
+                                                        </h4>
+                                                        </div>
+                                                        <div class="contentBox" id="seoBox1">
+                                                        <% var temp = response.audit.iFrame %>
+                                                        <% var count = (temp.match(/Perfect/g) || []).length; %>
+                                                        <% if(count > 0){ %>
+                                                        <div class="passedBox">
+                                                            <% } else{ %>  
+                                                        <div class="errorBox">
+                                                        <% } %>
+                                                            <div class="msgBox bottom10">       
+                                                                <%= response.audit.iFrame %>
+                                                            </div>
+                                                        </div>
+                                                        </div>
+                                                    </div>
+    
+                                                    <!--Domain Registration-->
+                                                    <div class="seoBox">
+                                                        <div class="headBox clearfix">
+                                                        <h4 class="titleStr">Domain Registration</h4>
+                                                        <h4 class="solveMsg" data-original-title="Easy to solve" data-toggle="tooltip" data-placement="top">
+                                                            <i class="fa fa-gear fa-xs solveMsgBlue"></i>
+                                                            <i class="fa fa-gear fa-xs "></i>
+                                                            <i class="fa fa-gear fa-xs "></i>
+                                                        </h4>
+                                                        </div>
+                                                        <div class="contentBox" id="seoBox1">
+                                                        <div class="lowImpactBox">
+                                                            <div class="msgBox">
+                                                                Exactly how many years and months
+                                                                <br><br>
+                                                                <div class="altImgGroup">
+                                                                   <p><i class="fa fa-paw solveMsgGreen"></i> <%= response.audit.domainRegistration.age %></p>
+                                                                   <p><i class="fa fa-paw solveMsgGreen"></i> <%= response.audit.domainRegistration.createdAt %></p>
+                                                                   <p><i class="fa fa-paw solveMsgGreen"></i> <%= response.audit.domainRegistration.updatedAt %></p>
+                                                                   <p><i class="fa fa-paw solveMsgGreen"></i> <%= response.audit.domainRegistration.expiryDate %></p>
+                                                                </div>
+                                                             </div>
+                                                        </div>
+                                                        </div>
+                                                    </div>
+    
+                                                    <!--Mobile Friendliness-->
+                                                    <div class="seoBox">
+                                                        <div class="headBox clearfix">
+                                                        <h4 class="titleStr">Mobile Friendliness</h4>
+                                                        <h4 class="solveMsg" data-original-title="Easy to solve" data-toggle="tooltip" data-placement="top">
+                                                            <i class="fa fa-gear fa-xs solveMsgBlue"></i>
+                                                            <i class="fa fa-gear fa-xs "></i>
+                                                            <i class="fa fa-gear fa-xs "></i>
+                                                        </h4>
+                                                        </div>
+                                                        <div class="contentBox" id="seoBox1">
+                                                        <% var temp = response.audit.mobileFriendliness %>
+                                                        <% var count = (temp.match(/Awesome/g) || []).length; %>
+                                                        <% if(count > 0){ %>
+                                                        <div class="passedBox">
+                                                            <% } else{ %>  
+                                                        <div class="errorBox">
+                                                        <% } %>
+                                                            <div class="msgBox bottom10">       
+                                                                <%= response.audit.mobileFriendliness %>
+                                                            </div>
+                                                        </div>
+                                                        </div>
+                                                    </div>
+    
+                                                    <!--Favicon-->
+                                                    <div class="seoBox">
+                                                        <div class="headBox clearfix">
+                                                        <h4 class="titleStr">Favicon</h4>
+                                                        <h4 class="solveMsg" data-original-title="Easy to solve" data-toggle="tooltip" data-placement="top">
+                                                            <i class="fa fa-gear fa-xs solveMsgBlue"></i>
+                                                            <i class="fa fa-gear fa-xs "></i>
+                                                            <i class="fa fa-gear fa-xs "></i>
+                                                        </h4>
+                                                        </div>
+                                                        <div class="contentBox" id="seoBox1">
+                                                        <% var temp = response.audit.favicon %>
+                                                        <% var count = (temp.match(/Great/g) || []).length; %>
+                                                        <% if(count > 0){ %>
+                                                        <div class="passedBox">
+                                                            <% } else{ %>  
+                                                        <div class="errorBox">
+                                                        <% } %>
+                                                            <div class="msgBox bottom10">       
+                                                                <%= response.audit.favicon %>
+                                                            </div>
+                                                        </div>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    <!--Custom 404 Page-->
+                                                    <div class="seoBox">
+                                                        <div class="headBox clearfix">
+                                                        <h4 class="titleStr">Custom 404 Page</h4>
+                                                        <h4 class="solveMsg" data-original-title="Easy to solve" data-toggle="tooltip" data-placement="top">
+                                                            <i class="fa fa-gear fa-xs solveMsgBlue"></i>
+                                                            <i class="fa fa-gear fa-xs "></i>
+                                                            <i class="fa fa-gear fa-xs "></i>
+                                                        </h4>
+                                                        </div>
+                                                        <div class="contentBox" id="seoBox1">
+                                                        <% var temp = response.audit.custome404Page %>
+                                                        <% var count = (temp.match(/Great/g) || []).length; %>
+                                                        <% if(count > 0){ %>
+                                                        <div class="passedBox">
+                                                            <% } else{ %>  
+                                                        <div class="errorBox">
+                                                        <% } %>
+                                                            <div class="msgBox bottom10">       
+                                                                <%= response.audit.custome404Page %>
+                                                            </div>
+                                                        </div>
+                                                        </div>
+                                                    </div>
+    
+                                                    <!--Page Size-->
+                                                    <div class="seoBox">
+                                                        <div class="headBox clearfix">
+                                                        <h4 class="titleStr">Page Size</h4>
+                                                        <h4 class="solveMsg" data-original-title="Easy to solve" data-toggle="tooltip" data-placement="top">
+                                                            <i class="fa fa-gear fa-xs solveMsgBlue"></i>
+                                                            <i class="fa fa-gear fa-xs "></i>
+                                                            <i class="fa fa-gear fa-xs "></i>
+                                                        </h4>
+                                                        </div>
+                                                        <div class="contentBox" id="seoBox1">
+                                                        <% var temp = response.audit.pageSize %>
+                                                        <% if(temp < 320){ %>
+                                                        <div class="passedBox">
+                                                            <% } else{ %>  
+                                                        <div class="errorBox">
+                                                        <% } %>
+                                                            <div class="msgBox bottom10">       
+                                                                <%= response.audit.pageSize %> KB (World Wide Web average is 320 Kb)
+                                                            </div>
+                                                        </div>
+                                                        </div>
+                                                    </div>
+    
+                                                    <!--Load Time-->
+                                                    <div class="seoBox">
+                                                        <div class="headBox clearfix">
+                                                        <h4 class="titleStr">Load Time</h4>
+                                                        <h4 class="solveMsg" data-original-title="Easy to solve" data-toggle="tooltip" data-placement="top">
+                                                            <i class="fa fa-gear fa-xs solveMsgBlue"></i>
+                                                            <i class="fa fa-gear fa-xs "></i>
+                                                            <i class="fa fa-gear fa-xs "></i>
+                                                        </h4>
+                                                        </div>
+                                                        <div class="contentBox" id="seoBox1">
+                                                        <% var temp = response.audit.loadTime %>
+                                                        <% if(temp < 1.2){ %>
+                                                        <div class="passedBox">
+                                                            <% } else{ %>  
+                                                        <div class="errorBox">
+                                                        <% } %>
+                                                            <div class="msgBox bottom10">       
+                                                                <%= response.audit.loadTime %> second(s)
+                                                            </div>
+                                                        </div>
+                                                        </div>
+                                                    </div>
+    
+                                                    <!--Language-->
+                                                    <div class="seoBox">
+                                                        <div class="headBox clearfix">
+                                                        <h4 class="titleStr">Language</h4>
+                                                        <h4 class="solveMsg" data-original-title="Easy to solve" data-toggle="tooltip" data-placement="top">
+                                                            <i class="fa fa-gear fa-xs solveMsgBlue"></i>
+                                                            <i class="fa fa-gear fa-xs "></i>
+                                                            <i class="fa fa-gear fa-xs "></i>
+                                                        </h4>
+                                                        </div>
+                                                        <div class="contentBox" id="seoBox1">
+                                                        <% var temp = response.audit.language %>
+                                                        <% var count = (temp.match(/Good/g) || []).length; %>
+                                                        <% if(count > 0){ %>
+                                                        <div class="passedBox">
+                                                            <% } else{ %>  
+                                                        <div class="errorBox">
+                                                        <% } %>
+                                                            <div class="msgBox bottom10">       
+                                                                <%= response.audit.language %>
+                                                            </div>
+                                                        </div>
+                                                        </div>
+                                                    </div>
+    
+                                                    <!--Email Privacy-->
+                                                    <div class="seoBox">
+                                                        <div class="headBox clearfix">
+                                                        <h4 class="titleStr">Email Privacy</h4>
+                                                        <h4 class="solveMsg" data-original-title="Easy to solve" data-toggle="tooltip" data-placement="top">
+                                                            <i class="fa fa-gear fa-xs solveMsgBlue"></i>
+                                                            <i class="fa fa-gear fa-xs "></i>
+                                                            <i class="fa fa-gear fa-xs "></i>
+                                                        </h4>
+                                                        </div>
+                                                        <div class="contentBox" id="seoBox1">
+                                                        <% var temp = response.audit.emailPrivacy %>
+                                                        <% var count = (temp.match(/Good/g) || []).length; %>
+                                                        <% if(count > 0){ %>
+                                                        <div class="passedBox">
+                                                            <% } else{ %>  
+                                                        <div class="errorBox">
+                                                        <% } %>
+                                                            <div class="msgBox bottom10">       
+                                                                <%= response.audit.emailPrivacy %>
+                                                            </div>
+                                                        </div>
+                                                        </div>
+                                                    </div>
+    
+                                                    <!--Safe Browsing-->
+                                                    <div class="seoBox">
+                                                        <div class="headBox clearfix">
+                                                        <h4 class="titleStr">Safe Browsing</h4>
+                                                        <h4 class="solveMsg" data-original-title="Easy to solve" data-toggle="tooltip" data-placement="top">
+                                                            <i class="fa fa-gear fa-xs solveMsgBlue"></i>
+                                                            <i class="fa fa-gear fa-xs "></i>
+                                                            <i class="fa fa-gear fa-xs "></i>
+                                                        </h4>
+                                                        </div>
+                                                        <div class="contentBox" id="seoBox1">
+                                                        <% var temp = response.audit.safeBrowsing %>
+                                                        <% var count = (temp.match(/not blacklisted/g) || []).length; %>
+                                                        <% if(count > 0){ %>
+                                                        <div class="passedBox">
+                                                            <% } else{ %>  
+                                                        <div class="errorBox">
+                                                        <% } %>
+                                                            <div class="msgBox bottom10">       
+                                                                <%= response.audit.safeBrowsing %>
+                                                            </div>
+                                                        </div>
+                                                        </div>
+                                                    </div>
+    
+                                                    <!--Server IP-->
+                                                    <div class="seoBox">
+                                                        <div class="headBox clearfix">
+                                                        <h4 class="titleStr">Server IP</h4>
+                                                        <h4 class="solveMsg" data-original-title="Easy to solve" data-toggle="tooltip" data-placement="top">
+                                                            <i class="fa fa-gear fa-xs solveMsgBlue"></i>
+                                                            <i class="fa fa-gear fa-xs "></i>
+                                                            <i class="fa fa-gear fa-xs "></i>
+                                                        </h4>
+                                                        </div>
+                                                        <div class="contentBox" id="seoBox1">
+                                                        <div class="lowImpactBox">
+                                                            <div class="msgBox bottom10">       
+                                                                <table class="table table-hover table-bordered server-table-striped">
+                                                                    <tbody>
+                                                                       <tr>
+                                                                          <th>Server IP</th>
+                                                                          <th>Server Location</th>
+                                                                          <th>Service Provider</th>
+                                                                       </tr>
+                                                                       <tr>
+                                                                          <td><%= response.audit.serverDetails.serverIp %></td>
+                                                                          <td><%= response.audit.serverDetails.serverLocation %></td>
+                                                                          <td><%= response.audit.serverDetails.serverProvider %></td>
+                                                                       </tr>
+                                                                    </tbody>
+                                                                 </table>
+                                                            </div>
+                                                        </div>
+                                                        </div>
+                                                    </div>
+    
+                                                    <!--Analytics-->
+                                                    <div class="seoBox">
+                                                        <div class="headBox clearfix">
+                                                        <h4 class="titleStr">Analytics</h4>
+                                                        <h4 class="solveMsg" data-original-title="Easy to solve" data-toggle="tooltip" data-placement="top">
+                                                            <i class="fa fa-gear fa-xs solveMsgBlue"></i>
+                                                            <i class="fa fa-gear fa-xs "></i>
+                                                            <i class="fa fa-gear fa-xs "></i>
+                                                        </h4>
+                                                        </div>
+                                                        <div class="contentBox" id="seoBox1">
+                                                        <% var temp = response.audit.encoding %>
+                                                        <% var count = (temp.match(/We detect/g) || []).length; %>
+                                                        <% if(count > 0){ %>
+                                                        <div class="passedBox">
+                                                            <% } else{ %>  
+                                                        <div class="errorBox">
+                                                        <% } %>
+                                                            <div class="msgBox bottom10">       
+                                                                <%= response.audit.analytics %>
+                                                            </div>
+                                                        </div>
+                                                        </div>
+                                                    </div>
+    
+                                                    <!--W3C Validate-->
+                                                    <div class="seoBox">
+                                                        <div class="headBox clearfix">
+                                                        <h4 class="titleStr">W3C Validate</h4>
+                                                        <h4 class="solveMsg" data-original-title="Easy to solve" data-toggle="tooltip" data-placement="top">
+                                                            <i class="fa fa-gear fa-xs solveMsgBlue"></i>
+                                                            <i class="fa fa-gear fa-xs "></i>
+                                                            <i class="fa fa-gear fa-xs "></i>
+                                                        </h4>
+                                                        </div>
+                                                        <div class="contentBox" id="seoBox1">
+                                                        <% var temp = response.audit.w3cValidate %>
+                                                        <% var count = (temp.match(/not/g) || []).length; %>
+                                                        <% if(count > 0){ %>
+                                                        <div class="errorBox">
+                                                            <% } else{ %>  
+                                                        <div class="passedBox">
+                                                        <% } %>
+                                                            <div class="msgBox bottom10">       
+                                                                <%= response.audit.w3cValidate %>
+                                                            </div>
+                                                        </div>
+                                                        </div>
+                                                    </div>
+    
+                                                    <!--DocType-->
+                                                    <div class="seoBox">
+                                                        <div class="headBox clearfix">
+                                                        <h4 class="titleStr">DocType</h4>
+                                                        <h4 class="solveMsg" data-original-title="Easy to solve" data-toggle="tooltip" data-placement="top">
+                                                            <i class="fa fa-gear fa-xs solveMsgBlue"></i>
+                                                            <i class="fa fa-gear fa-xs "></i>
+                                                            <i class="fa fa-gear fa-xs "></i>
+                                                        </h4>
+                                                        </div>
+                                                        <div class="contentBox" id="seoBox1">
+                                                        <div class="passedBox">
+                                                            <div class="msgBox bottom10">       
+                                                                <%= response.audit.docType %>
+                                                            </div>
+                                                        </div>
+                                                        </div>
+                                                    </div>
+    
+                                                    <!--Encoding-->
+                                                    <div class="seoBox">
+                                                        <div class="headBox clearfix">
+                                                        <h4 class="titleStr">Encoding</h4>
+                                                        <h4 class="solveMsg" data-original-title="Easy to solve" data-toggle="tooltip" data-placement="top">
+                                                            <i class="fa fa-gear fa-xs solveMsgBlue"></i>
+                                                            <i class="fa fa-gear fa-xs "></i>
+                                                            <i class="fa fa-gear fa-xs "></i>
+                                                        </h4>
+                                                        </div>
+                                                        <div class="contentBox" id="seoBox1">
+                                                        <% var temp = response.audit.encoding %>
+                                                        <% var count = (temp.match(/Great/g) || []).length; %>
+                                                        <% if(count > 0){ %>
+                                                        <div class="passedBox">
+                                                            <% } else{ %>  
+                                                        <div class="lowImpactBox">
+                                                        <% } %>
+                                                            <div class="msgBox bottom10">       
+                                                                <%= response.audit.encoding %>
+                                                            </div>
+                                                        </div>
+                                                        </div>
+                                                    </div>
+    
+                                                    <!--Traffic Based Rank-->
+                                                    <div class="seoBox">
+                                                        <div class="headBox clearfix">
+                                                        <h4 class="titleStr">Traffic Based Rank</h4>
+                                                        <h4 class="solveMsg" data-original-title="Easy to solve" data-toggle="tooltip" data-placement="top">
+                                                            <i class="fa fa-gear fa-xs solveMsgBlue"></i>
+                                                            <i class="fa fa-gear fa-xs "></i>
+                                                            <i class="fa fa-gear fa-xs "></i>
+                                                        </h4>
+                                                        </div>
+                                                        <div class="contentBox" id="seoBox1">
+                                                        <div class="lowImpactBox">
+                                                            <div class="msgBox bottom10">       
+                                                                <%= response.audit.trafficBasedRank %>
+                                                            </div>
+                                                        </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <% } %>
                 </div>
             </div>
-
-            <h4 onclick="PrintDiv();" id="printBtn"> Print </h4>
 
             <%- include('./includes/footer')-%>
             
     </div><a href="#seocrawler-top-anchor" class="seocrawler-footer-back-to-top-button" id="seocrawler-footer-back-to-top-button"><i class="fa fa-angle-up"></i></a>
 
 <%- include('./includes/htmlScript')-%>
+
+<script>
+   document.getElementById("passedMarkss").innerHTML = document.querySelectorAll('.passedBox').length - 1;
+   document.getElementById("improveMarkss").innerHTML = document.querySelectorAll('.improveBox').length - 1;
+   document.getElementById("errorMarkss").innerHTML = document.querySelectorAll('.errorBox').length - 1;
+</script>
 
 <script>
     $(window).on('resize', function() {
